@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showingSheet = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
+        Button("Show Detail View") {
+                    showingSheet.toggle()
+                }
+                .sheet(isPresented: $showingSheet, content: PageDetailView.init)
         .padding()
     }
 }
