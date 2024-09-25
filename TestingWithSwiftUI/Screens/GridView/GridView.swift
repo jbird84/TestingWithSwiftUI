@@ -15,9 +15,9 @@ struct GridView: View {
                     .gridCellColumns(1)
             }
         }
-      //  .gridStyle(
-      //     // StaggeredGridStyle(tracks: 3, spacing: 16)
-     //   )
+//        .gridStyle(
+//           StaggeredGridStyle(tracks: 3, spacing: 16)
+//        )
     }
 }
 
