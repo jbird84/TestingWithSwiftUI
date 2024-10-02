@@ -15,7 +15,6 @@ struct CustomToolbarView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: {
-                            // Action for leading button
                         }) {
                             Image(systemName: "star")
                                 .foregroundColor(.blue)
@@ -27,7 +26,6 @@ struct CustomToolbarView: View {
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
-                            // Action for trailing button
                         }) {
                             Image(systemName: "ellipsis")
                         }
