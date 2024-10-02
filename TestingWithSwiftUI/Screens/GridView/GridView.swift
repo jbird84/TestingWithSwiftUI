@@ -8,16 +8,21 @@
 import SwiftUI
 
 struct GridView: View {
+    let items = Array(1...10)
+    
     var body: some View {
         Grid {
-            ForEach(0..<100) { index in
-                Text("Item \(index)")
-                    .gridCellColumns(1)
+            GridRow {
+                ForEach(items, id: \.self) { item in
+                    Text("Item \(item)")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                }
             }
         }
-//        .gridStyle(
-//           StaggeredGridStyle(tracks: 3, spacing: 16)
-//        )
+        .padding()
     }
 }
 
